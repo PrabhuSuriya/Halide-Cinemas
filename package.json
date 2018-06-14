@@ -16,7 +16,12 @@
     "tsc:w": "tsc --project tsconfig.json -w",
     "start:dev": "nodemon --watch 'server/**/*.ts' --ignore 'node_modules/**/*' --exec ts-node server/index.ts",
     "start-1": "ts-node-dev server/index.ts && ng serve",
-    "start": "concurrently \"ng serve --progress false\" \"ts-node-dev server/index.ts\" "
+    "start-2": "concurrently \"ng serve --progress false\" \"ts-node-dev server/index.ts\" ",
+    "server-clean": "rimraf 'server/**/*.{js,js.map}'",
+    "server": "ts-node-dev server/index.ts",
+    "client": "ng serve --progress false --proxy-config proxy.conf.json",
+    "start": "concurrently \"npm run client\" \"npm run server\" "
+
   },
   "private": true,
   "dependencies": {

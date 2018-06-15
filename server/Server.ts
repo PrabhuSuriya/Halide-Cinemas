@@ -4,6 +4,9 @@ import { $log } from 'ts-log-debug';
 
 @ServerSettings({
   rootDir: __dirname,
+  mount: {
+    '/api/v1': '${rootDir}/**/controllers/**/*.ts'
+  },
   acceptMimes: ['application/json'],
   logger: {
     debug: false,

@@ -1,5 +1,6 @@
 import { GlobalAcceptMimesMiddleware, ServerLoader, ServerSettings } from '@tsed/common';
 import '@tsed/swagger';
+import '@tsed/mongoose'; // import mongoose ts.ed module
 import { $log } from 'ts-log-debug';
 
 @ServerSettings({
@@ -20,7 +21,10 @@ import { $log } from 'ts-log-debug';
     token: true
   },
   port: 3300,
-  httpsPort: 3400
+  httpsPort: 3400,
+  mongoose: {
+    url: 'mongodb://user:pass1234@ds261470.mlab.com:61470/halidedb'
+  }
 })
 export class Server extends ServerLoader {
   /**

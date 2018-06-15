@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
   constructor(private _http: HttpClient) {}
 
   ngOnInit() {
-    this._http.get('/rest/calendars/2').subscribe(data => {
+    this._http.get('/api/v1/calendars/2').subscribe(data => {
       console.log(data);
       this.data = data;
     });

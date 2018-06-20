@@ -1,7 +1,7 @@
 import { MongooseDocument } from '@tsed/mongoose/lib';
 import { Model } from '@tsed/mongoose';
 import { Schema } from 'mongoose';
-import { Enum, IgnoreProperty, Pattern, Property, Required } from '@tsed/common';
+import { Enum, IgnoreProperty, Pattern, Property, Required, PropertyType } from '@tsed/common';
 
 @Model()
 export class Cinema {
@@ -9,7 +9,7 @@ export class Cinema {
 
   @Property() name: string;
   @Property() year: string;
-  @Property() genre: string[];
+  @PropertyType(String) genre: string[];
   @Property() director: string;
 
   @Property() posterUrl: string;

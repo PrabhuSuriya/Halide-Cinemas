@@ -1,10 +1,12 @@
 import { MongooseDocument } from '@tsed/mongoose/lib';
-import { Model } from '@tsed/mongoose';
+import { Model, MongoosePlugin } from '@tsed/mongoose';
 import { Schema } from 'mongoose';
 import { Enum, IgnoreProperty, Pattern, Property, Required, PropertyType } from '@tsed/common';
+import * as mongoosePaginate from 'mongoose-paginate';
 
 @Model()
-export class Cinema {
+@MongoosePlugin(mongoosePaginate, {})
+export class MovieModel {
   @Property() _id: string;
 
   @Property() name: string;

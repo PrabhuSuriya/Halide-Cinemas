@@ -10,9 +10,11 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
+import { MoviesComponent } from './admin/movies/movies.component';
+import { MovieDetailComponent } from './admin/movie-detail/movie-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, MovieListComponent, ContactUsComponent, AboutComponent, AdminComponent],
+  declarations: [AppComponent, MovieListComponent, ContactUsComponent, AboutComponent, AdminComponent, MoviesComponent, MovieDetailComponent],
   imports: [BrowserModule, AppRoutingModule, MDBBootstrapModule.forRoot(), HttpClientModule],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],

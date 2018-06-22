@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div *ngFor="let movie of movies" class="col-md-2 movie-card-container">
+          <a [routerLink]="[movie._id]">
+            <div class="movie-card">
+              <img src="{{'assets/images/posters/'+movie.posterImgUrl}}" class="movie-card-img" alt="">
+              <div class="movie-title" [title]="movie.name">
+                {{movie.name}}
+              </div>
+              <div class="movie-info">
+                {{movie.director}}
+              </div>
+              <!-- <i class="fa fa-eye" title="View movie"></i> -->
+            </div>
+
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

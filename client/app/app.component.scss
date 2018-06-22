@@ -15,3 +15,21 @@ nav {
     }
   }
 }
+
+.spinner {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: .4;
+  z-index: 99;
+  img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 200px;
+    z-index: 100;
+  }
+}

@@ -7,7 +7,7 @@ import { AdminComponent } from './admin/admin.component';
 import { MoviesComponent } from './admin/movies/movies.component';
 import { MovieDetailComponent } from './admin/movie-detail/movie-detail.component';
 import { AdminService } from './shared/services/admin.service';
-import { MovieResolver } from './shared/guard/movies.resolveguard';
+import { MovieResolver, MoviesResolver } from './shared/guard/movies.resolveguard';
 
 const routes: Routes = [
   {
@@ -26,7 +26,11 @@ const routes: Routes = [
     path: 'admin',
     component: AdminComponent,
     children: [
-      { path: 'movies', component: MoviesComponent },
+      {
+        path: 'movies',
+        component: MoviesComponent,
+        resolve: { movies: MoviesResolver }
+      },
       {
         path: 'movies/:id',
         component: MovieDetailComponent,

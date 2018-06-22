@@ -21,6 +21,6 @@
 </nav>
 
 <router-outlet></router-outlet>
-<div class="spinner">
+<div class="spinner" *ngIf="_storage.showLoader">
   <img src="assets/images/loader.png" />
 </div>

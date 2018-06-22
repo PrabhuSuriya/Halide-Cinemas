@@ -13,3 +13,14 @@ export class MovieResolver implements Resolve<any> {
     return this.adminService.getMovie(route.paramMap.get('id'));
   }
 }
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MoviesResolver implements Resolve<any> {
+  constructor(private adminService: AdminService) {}
+
+  resolve(route: ActivatedRouteSnapshot) {
+    return this.adminService.getMovies();
+  }
+}

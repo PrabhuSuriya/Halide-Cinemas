@@ -22,8 +22,8 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: black;
-  opacity: .4;
+  background-color: rgba(0, 0, 0, 0.15);
+  /* opacity: .4; */
   z-index: 99;
   img {
     width: 50px;
